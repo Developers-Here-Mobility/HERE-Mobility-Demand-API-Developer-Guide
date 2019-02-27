@@ -41,9 +41,9 @@ Arrival). They can view several ride options, choose the one they want, and book
 
 The Demand API is a supported over the REST and GRPC protocols.
 
-**REST endpoint:** [https://marketplace.mobility.here.com](https://marketplace.mobility.here.com)
+**REST Domain:** https://marketplace.mobility.here.com
 
-**GRPC endpoint:** [https://demand-grpc.inc-stg.solo-experiments.com](https://demand-grpc.inc-stg.solo-experiments.com/)
+**GRPC Domain + Port:** grpc-marketplace.mobility.here.com:443
 
 >**Note**: For a single client, requests to the Demand API must be limited to a rate of 50 requests per minute, and a total of no more than 1000 per day.
 
