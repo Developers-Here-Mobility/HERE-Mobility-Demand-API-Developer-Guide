@@ -83,40 +83,40 @@ Error Category	| Description
 
 The following table describes the error codes that HERE API clients can receive:
 
-Domain|	Message (& Details) | 	Code
-:-----|:--------|:-------
-General 		| Invalid request 																| 400000
-Get Ride 		| Route is missing   															| 400001	
-Get Ride 		| Pickup location is missing													| 400002	
-Get Ride 		| Pickup point is missing   													| 400003	
-Get Ride 		| Pickup latitude is invalid. Value should be between -90 and 90.    			| 400004
-Get Ride 		| Pickup longitude is invalid. Value should be between -180 and 180.    		| 400005
-Get Ride 		| Drop off location is missing   												| 400007	
-Request Ride 	| Pickup time missing from ride request 										| 400009
-Get Ride 		| Pickup cannot be booked for more than <MaxDays> days from the current date (the pickup time is too far in the future)	| 400010
-Get Ride 		| Pickup time cannot be in the past   											| 400011	
-Get Ride 		| Maximum walking distance chosen is not supported (the given limit on walking distance	has an invalid format or value)						| 400016
-Get Offers 		| Invalid number of changes (the maximum allowed number of transit changes during the route was exceeded) 		| 400017
-Cancel Ride 	| Ride ID is invalid    														| 400018	
-Cancel Ride     | Invalid reason category format 												| 400019
-Cancel Ride     | Invalid reason category value 												| 400020
-Get Offers 		| Offer ID is missing or invalid   												| 400021	
-General		 	| User ID is missing   															| 400022	
-Get Offers 		| Demander ID is missing or invalid   											| 400023
-Get Ride 		| Drop off point is missing														| 400024
-Get Ride 		| Drop off latitude is invalid. Value should be between -90 and 90.				| 400025
-Get Ride 		| Drop off longitude is invalid. Value should be between -180 and 180.  		| 400026
-Authentication 	| Invalid token																	| 401001
-Authentication 	| Token expired																	| 401002
-General  		| Permission denied																| 403000
-General 		| Requested item not found 														| 404000
-Create Ride		| Offer timed out  																| 404001
-Get Ride 		| The ride requested can't be found    											| 404002	
-General 		| Request timeout																| 408000
-General 		| Failed dependency	(an error was received from a 3rd-party package)			| 424000
-General	   		| Too many requests	(server is busy)											| 429000
-General	       	| Internal server error															| 500000
-General	       	| Not Implemented																| 501000
+Domain|	Error Code | Message | Details 
+:-----|:-----------|:--------|:------
+General 	| 400000	| Invalid request 	| -										
+Get Ride 	| 400001	| Route is missing  | -											
+Get Ride 	| 400002	| Pickup location is missing | Pickup address/place name is missing
+Get Ride 	| 400003	| Pickup point is missing  | Pickup longitude and latitude are missing
+Get Ride 	| 400004	| Pickup latitude is invalid. Value should be between [min range] and [max range]  | Latitude value should be between -90 and 90.    			
+Get Ride 	| 400005	| Pickup longitude is invalid. Value should be between [min range] and [max range]  | Longitude value should be between -180 and 180.    		
+Get Ride 	| 400007	| Drop off location is missing | Drop off address/place name is missing												
+Request Ride| 400009 	| Pickup time is missing | -								
+Get Ride | 400010 | Pickup cannot be booked for more than [max] days from the current date | The pickup time is too far in the future
+Get Ride | 400011 | Pickup time cannot be in the past  | - 									
+Get Ride | 400016 | Maximum walking distance chosen is not supported | The given limit on walking distance has an invalid format or value						
+Get Offers | 400017	| Invalid number of changes | The maximum allowed number of transit changes during the route was exceeded	
+Cancel Ride 	| 400018| Ride ID is invalid  | - 											
+Cancel Ride     | 400019| Reason category format is invalid | - 									
+Cancel Ride     | 400020| Reason category value is invalid 	| -								
+Get Offers 		| 400021| Offer ID is missing or invalid  | - 									
+General		 	| 400022| User ID is missing | -  												
+Get Offers 		| 400023| Demander ID is missing or invalid   | -								
+Get Ride 		| 400024| Drop off point is missing | Drop off longitude and latitude are missing											
+Get Ride 		| 400025| Drop off latitude is invalid. Value should be between [min range] and [max range]  | Latitude value should be between -90 and 90.	
+Get Ride 		| 400026| Drop off longitude is invalid. Value should be between [min range] and [max range]  | Longitude value should be between -180 and 180.  	
+Authentication 	| 401001| Invalid token	| -												
+Authentication 	| 401002| Token expired	| -													
+General  		| 403000| Permission denied	| -												
+General 		| 404000| Requested item not found 	| -										
+Create Ride		| 404001| Offer timed out | The offer has expired. 									
+Get Ride 		| 404002| The ride requested can't be found  | -  								
+General 		| 408000| Request timeout	| -												
+General 		| 424000| Failed dependency	| An error was received from a 3rd-party package
+General	   		| 429000| Too many requests	| Server is busy								
+General	       	| 500000| Internal server error | -												
+General	       	| 501000| Not Implemented	| -															
 
 ## References ##
 
