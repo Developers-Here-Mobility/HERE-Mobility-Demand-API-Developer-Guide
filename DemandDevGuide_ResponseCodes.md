@@ -43,10 +43,10 @@ The GRPC error is translated to its RESTful JSON representation automatically by
 
 Here is an example of a JSON-formatted error:
 
-    Header Code: 40400
+    Header Code: 404000
     Body:
     {
-        "code": 40400,
+        "code": 404000,
         "locale: "en-US"
         "message": "Requested item not found"
     }
@@ -55,17 +55,17 @@ The GRPC error code is translated to an HTTP header status code, according to th
 
 GRPC Error Code	| HTTP Error Code
 :---------------|:----------------
-InvalidArgument	|StatusBadRequest (400)
-OutOfRange	    |StatusBadRequest (400)
-PermissionDenied	|StatusForbidden (403)
-Unauthenticated	|StatusUnauthorized (401)
-NotFound	    |StatusNotFound (404)
-AlreadyExists	|StatusConflict (409)
-FailedPrecondition	|StatusPreconditionFailed (412)
-Internal	    |StatusInternalServerError (500)
-Unknown	        |StatusInternalServerError (500)
-Unavailable     | StatusServiceUnavailable(503)
-DeadlineExceeded | StatusGatewayTimeout (504)
+InvalidArgument	|StatusBadRequest (400000)
+OutOfRange	    |StatusBadRequest (400000)
+PermissionDenied	|StatusForbidden (403000)
+Unauthenticated	|StatusUnauthorized (401000)
+NotFound	    |StatusNotFound (404000)
+AlreadyExists	|StatusConflict (409000)
+FailedPrecondition	|StatusPreconditionFailed (412000)
+Internal	    |StatusInternalServerError (500000)
+Unknown	        |StatusInternalServerError (500000)
+Unavailable     | StatusServiceUnavailable(503000)
+DeadlineExceeded | StatusGatewayTimeout (504000)
  
 ## Error Categories ##
 
